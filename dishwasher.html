@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishwasher Instructions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        
+        .back-button:hover {
+            background: #764ba2;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .safe-list, .not-safe-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .safe-list {
+            border-left: 5px solid #4caf50;
+        }
+        
+        .not-safe-list {
+            border-left: 5px solid #f44336;
+        }
+        
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 50px;
+            margin: 20px 0;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .warning strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        
+        <h1>🍽️ Dishwasher Instructions</h1>
+        
+        <div class="section">
+            <h2>✅ Dishwasher Safe Items</h2>
+            <div class="safe-list">
+                <ul>
+                    <li>Most plates, bowls, and cups (ceramic, glass, and plastic)</li>
+                    <li>Stainless steel utensils and cookware</li>
+                    <li>Glass bakeware (Pyrex)</li>
+                    <li>Plastic containers marked "dishwasher safe"</li>
+                    <li>Cutting boards (plastic only)</li>
+                    <li>Silicone kitchen tools</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>❌ NOT Dishwasher Safe Items</h2>
+            <div class="not-safe-list">
+                <ul>
+                    <li><strong>Cast iron cookware</strong> - Hand wash only</li>
+                    <li><strong>Non-stick pans</strong> - Hand wash to preserve coating</li>
+                    <li><strong>Wooden utensils and cutting boards</strong> - Will crack and warp</li>
+                    <li><strong>Sharp kitchen knives</strong> - Dulls the blades</li>
+                    <li><strong>Fine china or antique dishes</strong> - Located in dining room cabinet</li>
+                    <li><strong>Copper or brass items</strong> - Will tarnish</li>
+                    <li><strong>Insulated mugs and water bottles</strong> - Can damage insulation</li>
+                    <li><strong>Anything with gold or silver trim</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>How to Use the Dishwasher</h2>
+            <ol class="steps">
+                <li>Scrape off large food particles (no need to rinse)</li>
+                <li>Load dishes with dirty side facing the center spray arm</li>
+                <li>Place cups and bowls on the top rack at an angle</li>
+                <li>Put plates and larger items on the bottom rack</li>
+                <li>Place utensils in the basket with handles down (knives up for safety)</li>
+                <li>Add detergent pod to the dispenser (pods are under the sink)</li>
+                <li>Close the door firmly until it clicks</li>
+                <li>Press the "Normal" cycle button</li>
+                <li>Press "Start"</li>
+            </ol>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ Important:</strong> The dishwasher runs for approximately 2 hours. Please don't open it mid-cycle. Detergent pods are located in the cabinet under the kitchen sink.
+        </div>
+        
+        <div class="section">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><strong>Won't start?</strong> Make sure the door is fully closed and latched</li>
+                <li><strong>Dishes not clean?</strong> Ensure spray arms can rotate freely</li>
+                <li><strong>Water on floor?</strong> Check that the door seal is clean and undamaged</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

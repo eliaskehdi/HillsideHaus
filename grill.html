@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grill Instructions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        
+        .back-button:hover {
+            background: #764ba2;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 50px;
+            margin: 20px 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .danger {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            color: #721c24;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            color: #0c5460;
+        }
+        
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        
+        <h1>🔥 Outdoor Grill Instructions</h1>
+        
+        <div class="danger">
+            <strong>🚨 SAFETY FIRST:</strong> Never leave the grill unattended while in use. Keep children and pets at least 3 feet away. Always grill in a well-ventilated outdoor area.
+        </div>
+        
+        <div class="section">
+            <h2>Before You Start</h2>
+            <ul>
+                <li><strong>Location:</strong> The grill is located on the back patio</li>
+                <li><strong>Type:</strong> Propane gas grill</li>
+                <li><strong>Propane Tank:</strong> Located in the storage box next to the grill</li>
+                <li><strong>Grilling Tools:</strong> In the drawer of the outdoor kitchen station</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>How to Use the Grill</h2>
+            <ol class="steps">
+                <li>Check that the propane tank is connected and has gas (gauge on top of tank)</li>
+                <li>Open the grill lid completely</li>
+                <li>Turn the propane tank valve to "OPEN" (turn counterclockwise)</li>
+                <li>Turn the left burner knob to "HIGH" while pressing the ignition button</li>
+                <li>Once lit, turn on additional burners as needed</li>
+                <li>Close the lid and preheat for 10-15 minutes</li>
+                <li>Clean the grates with the wire brush (in the tool drawer)</li>
+                <li>Place food on the grill and cook as desired</li>
+                <li>Monitor your food - never leave the grill unattended</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Shutting Down the Grill</h2>
+            <ol class="steps">
+                <li>Turn all burner knobs to "OFF"</li>
+                <li>Turn the propane tank valve to "CLOSED" (turn clockwise)</li>
+                <li>Let the grill cool for at least 30 minutes</li>
+                <li>Once cool, brush the grates clean</li>
+                <li>Close the lid</li>
+                <li>Cover the grill with the weather cover (stored underneath)</li>
+            </ol>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ Important Tips:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Always open the lid before igniting to prevent gas buildup</li>
+                <li>If the grill doesn't light after 3 attempts, wait 5 minutes before trying again</li>
+                <li>Use the left burner first as it's closest to the igniter</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <strong>ℹ️ Temperature Guide:</strong>
+            <ul style="margin-top: 10px;">
+                <li><strong>High:</strong> 450-500°F - Searing steaks</li>
+                <li><strong>Medium-High:</strong> 375-450°F - Burgers, vegetables</li>
+                <li><strong>Medium:</strong> 325-375°F - Chicken, fish</li>
+                <li><strong>Low:</strong> 250-325°F - Slow cooking, keeping warm</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><strong>Grill won't light?</strong> Check propane tank is open and has gas</li>
+                <li><strong>Weak flame?</strong> Check for blockages in burner tubes (spiders love these!)</li>
+                <li><strong>Uneven heating?</strong> Clean the burner ports with a wire brush</li>
+                <li><strong>Out of propane?</strong> Please text us and we'll arrange a replacement</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Cleaning After Use</h2>
+            <ul>
+                <li>Brush grates while still warm (easier to clean)</li>
+                <li>Empty the drip tray if needed (located under the grill)</li>
+                <li>Wipe down the exterior with a damp cloth</li>
+                <li>Return all tools to the drawer</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

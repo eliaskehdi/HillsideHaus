@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Home - Guest Instructions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .welcome-text {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .instruction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .instruction-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .instruction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .instruction-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .instruction-card p {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .emergency {
+            background: #ff6b6b;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            color: white;
+        }
+        
+        .emergency h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Welcome to Hillside Haus!</h1>
+        <p class="welcome-text">We hope you have a wonderful stay. Click on any card below for detailed instructions.</p>
+        
+        <div class="instruction-grid">
+            <a href="dishwasher.html" class="instruction-card">
+                <div class="icon">🍽️</div>
+                <h2>Dishwasher</h2>
+                <p>Learn what's dishwasher safe and how to use it properly</p>
+            </a>
+            
+            <a href="grill.html" class="instruction-card">
+                <div class="icon">🔥</div>
+                <h2>Outdoor Grill</h2>
+                <p>Step-by-step guide to using the BBQ grill</p>
+            </a>
+            
+            <a href="tv.html" class="instruction-card">
+                <div class="icon">📺</div>
+                <h2>TV & Entertainment</h2>
+                <p>How to use the TV, streaming services, and sound system</p>
+            </a>
+            
+            <a href="wifi.html" class="instruction-card">
+                <div class="icon">📶</div>
+                <h2>WiFi & Internet</h2>
+                <p>Network information and troubleshooting</p>
+            </a>
+            
+            <a href="heating.html" class="instruction-card">
+                <div class="icon">🌡️</div>
+                <h2>Heating & AC</h2>
+                <p>Climate control and thermostat instructions</p>
+            </a>
+            
+            <a href="trash.html" class="instruction-card">
+                <div class="icon">♻️</div>
+                <h2>Trash & Recycling</h2>
+                <p>Disposal guidelines and pickup schedule</p>
+            </a>
+        </div>
+        
+        <div class="emergency">
+            <h3>🚨 Emergency Contacts</h3>
+            <p><strong>Emergency Services:</strong> 911</p>
+            <p><strong>Host Contact:</strong> (555) 123-4567</p>
+            <p><strong>Non-Emergency:</strong> (555) 987-6543</p>
+        </div>
+    </div>
+</body>
+</html>

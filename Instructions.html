@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Instructions - Welcome to Our Airbnb</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .instruction-section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            scroll-margin-top: 80px;
+        }
+
+        .instruction-section h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .instruction-section h3 {
+            color: #764ba2;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul.instruction-list {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        ul.instruction-list li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .warning strong {
+            color: #856404;
+        }
+
+        .tip {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .tip strong {
+            color: #0c5460;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .do, .dont {
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .do {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .dont {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        .do h4 {
+            color: #155724;
+            margin-bottom: 0.5rem;
+        }
+
+        .dont h4 {
+            color: #721c24;
+            margin-bottom: 0.5rem;
+        }
+
+        .emergency {
+            background-color: #f8d7da;
+            border: 2px solid #dc3545;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        .emergency h3 {
+            color: #dc3545;
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Welcome to Our Home!</h1>
+        <p>Please read these instructions to make your stay comfortable and easy</p>
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#wifi">📶 WiFi</a></li>
+            <li><a href="#dishwasher">🍽️ Dishwasher</a></li>
+            <li><a href="#grill">🔥 Grill</a></li>
+            <li><a href="#washer">👕 Washer/Dryer</a></li>
+            <li><a href="#thermostat">🌡️ Thermostat</a></li>
+            <li><a href="#tv">📺 TV</a></li>
+            <li><a href="#checkout">✅ Checkout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- WiFi Section -->
+        <section id="wifi" class="instruction-section">
+            <div class="icon">📶</div>
+            <h2>WiFi Instructions</h2>
+            <p><strong>Network Name:</strong> MyHomeNetwork</p>
+            <p><strong>Password:</[REDACTED:PASSWORD]ome2023!</p>
+            
+            <div class="tip">
+                <strong>💡 Tip:</strong> The router is located in the living room behind the TV. If you experience connectivity issues, simply unplug it for 30 seconds and plug it back in.
+            </div>
+        </section>
+
+        <!-- Dishwasher Section -->
+        <section id="dishwasher" class="instruction-section">
+            <div class="icon">🍽️</div>
+            <h2>Dishwasher Instructions</h2>
+            
+            <h3>How to Use:</h3>
+            <ul class="instruction-list">
+                <li>Load dishes with the dirty side facing the center</li>
+                <li>Add detergent pod to the dispenser (located on the inside of the door)</li>
+                <li>Close the door firmly until you hear a click</li>
+                <li>Press the "Normal" cycle button</li>
+                <li>Press "Start"</li>
+            </ul>
+
+            <div class="do-dont">
+                <div class="do">
+                    <h4>✅ Dishwasher Safe:</h4>
+                    <ul>
+                        <li>Plates and bowls</li>
+                        <li>Glasses and mugs</li>
+                        <li>Stainless steel utensils</li>
+                        <li>Pots and pans (except cast iron)</li>
+                        <li>Plastic containers (top rack only)</li>
+                    </ul>
+                </div>
+                <div class="dont">
+                    <h4>❌ NOT Dishwasher Safe:</h4>
+                    <ul>
+                        <li>Cast iron cookware</li>
+                        <li>Wooden utensils/cutting boards</li>
+                        <li>Sharp kitchen knives</li>
+                        <li>Non-stick pans (hand wash preferred)</li>
+                        <li>Wine glasses (hand wash preferred)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip">
+                <strong>💡 Tip:</strong> Detergent pods are located under the kitchen sink. A full cycle takes approximately 2 hours.
+            </div>
+        </section>
+
+        <!-- Grill Section -->
+        <section id="grill" class="instruction-section">
+            <div class="icon">🔥</div>
+            <h2>Outdoor Grill Instructions</h2>
+            
+            <h3>Before You Start:</h3>
+            <ul class="instruction-list">
+                <li>The grill is located on the back patio</li>
+                <li>Propane tank is connected and ready to use</li>
+                <li>Grilling tools are in the drawer of the grill cart</li>
+            </ul>
+
+            <h3>How to Use:</h3>
+            <ul class="instruction-list">
+                <li><strong>Step 1:</strong> Open the grill lid completely</li>
+                <li><strong>Step 2:</strong> Turn on the propane tank valve (turn counter-clockwise)</li>
+                <li><strong>Step 3:</strong> Turn the left burner knob to "High" and press the ignition button</li>
+                <li><strong>Step 4:</strong> Once lit, turn on additional burners as needed</li>
+                <li><strong>Step 5:</strong> Let the grill preheat for 10-15 minutes</li>
+                <li><strong>Step 6:</strong> After cooking, turn all knobs to "Off"</li>
+                <li><strong>Step 7:</strong> Turn off the propane tank valve (turn clockwise)</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ Warning:</strong> Never light the grill with the lid closed! Always check that burners are off before turning on the propane tank.
+            </div>
+
+            <h3>After Use:</h3>
+            <ul class="instruction-list">
+                <li>Use the wire brush (in the grill cart) to clean the grates while still warm</li>
+                <li>Ensure all burners and the propane tank are turned off</li>
+                <li>Close the grill lid</li>
+                <li>Cover with the grill cover (hanging on the side of the deck)</li>
+            </ul>
+
+            <div class="tip">
+                <strong>💡 Tip:</strong> If the igniter doesn't work, you can use a long lighter. Check the propane level gauge on the tank - if it's low, please let us know.
+            </div>
+        </section>
+
+        <!-- Washer/Dryer Section -->
+        <section id="washer" class="instruction-section">
+            <div class="icon">👕</div>
+            <h2>Washer & Dryer Instructions</h2>
+            
+            <h3>Washing Machine:</h3>
+            <ul class="instruction-list">
+                <li>Add clothes (don't overload - fill no more than 3/4 full)</li>
+                <li>Add detergent to the dispenser drawer (left compartment)</li>
+                <li>Select cycle: "Normal" for most loads</li>
+                <li>Press "Start"</li>
+            </ul>
+
+            <h3>Dryer:</h3>
+            <ul class="instruction-list">
+                <li>Transfer clothes from washer</li>
+                <li>Clean the lint trap (pull out from top of door)</li>
+                <li>Select "Medium Heat" for most items</li>
+                <li>Press "Start"</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ Important:</strong> Always clean the lint trap before each dryer use. Detergent and dryer sheets are provided under the laundry room counter.
+            </div>
+        </section>
+
+        <!-- Thermostat Section -->
+        <section id="thermostat" class="instruction-section">
+            <div class="icon">🌡️</div>
+            <h2>Thermostat Instructions</h2>
+            
+            <p>The thermostat is located in the hallway near the bedrooms.</p>
+            
+            <h3>How to Adjust:</h3>
+            <ul class="instruction-list">
+                <li>Touch the screen to wake it up</li>
+                <li>Tap "Heat" or "Cool" to select mode</li>
+                <li>Use the up/down arrows to adjust temperature</li>
+                <li>The system will automatically maintain your selected temperature</li>
+            </ul>
+
+            <div class="tip">
+                <strong>💡 Recommended Settings:</strong><br>
+                Summer (Cooling): 72-75°F<br>
+                Winter (Heating): 68-70°F
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Please Note:</strong> To conserve energy, please keep windows closed when heating or cooling. The system will automatically go to eco mode if you're away for extended periods.
+            </div>
+        </section>
+
+        <!-- TV Section -->
+        <section id="tv" class="instruction-section">
+            <div class="icon">📺</div>
+            <h2>TV & Entertainment Instructions</h2>
+            
+            <h3>Getting Started:</h3>
+            <ul class="instruction-list">
+                <li>Use the black remote (Samsung TV remote)</li>
+                <li>Press the power button at the top</li>
+                <li>The TV will default to the home screen</li>
+            </ul>
+
+            <h3>Available Streaming Services:</h3>
+            <ul class="instruction-list">
+                <li>Netflix (logged in)</li>
+                <li>Hulu (logged in)</li>
+                <li>Disney+ (logged in)</li>
+                <li>Amazon Prime Video (logged in)</li>
+                <li>YouTube</li>
+            </ul>
+
+            <div class="tip">
+                <strong>💡 Tip:</strong> You can log into your own streaming accounts, but please log out before checkout. Cable TV is also available - press "Source" and select "Live TV".
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section id="checkout" class="instruction-section">
+            <div class="icon">✅</div>
+            <h2>Checkout Instructions</h2>
+            
+            <p>Checkout time is <strong>11:00 AM</strong>. Please complete the following before you leave:</p>
+            
+            <h3>Checkout Checklist:</h3>
+            <ul class="instruction-list">
+                <li>☐ Start the dishwasher if you used dishes</li>
+                <li>☐ Take out trash to the bins outside</li>
+                <li>☐ Turn off all lights</li>
+                <li>☐ Adjust thermostat to 78°F (summer) or 62°F (winter)</li>
+                <li>☐ Close and lock all windows</li>
+                <li>☐ Turn off TV and other electronics</li>
+                <li>☐ Check that you haven't left any belongings</li>
+                <li>☐ Lock the door and leave the key in the lockbox</li>
+            </ul>
+
+            <div class="tip">
+                <strong>💡 Note:</strong> No need to strip beds or wash towels - we'll take care of that! Just gather used towels and leave them in the bathroom.
+            </div>
+        </section>
+
+        <!-- Emergency Section -->
+        <div class="emergency">
+            <h3>🚨 Emergency Information</h3>
+            <p><strong>Emergency Services:</strong> 911</p>
+            <p><strong>Host Contact:</strong> (555) 123-4567</p>
+            <p><strong>Fire Extinguisher:</strong> Under kitchen sink</p>
+            <p><strong>First Aid Kit:</strong> Bathroom cabinet</p>
+            <p><strong>Main Water Shutoff:</strong> Basement, right side</p>
+            <p><strong>Circuit Breaker:</strong> Garage, back wall</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Thank you for staying with us! 🏠</p>
+        <p>If you have any questions, don't hesitate to reach out.</p>
+        <p>Enjoy your stay!</p>
+    </div>
+</body>
+</html>
