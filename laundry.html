@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV & Entertainment Instructions</title>
+    <title>Laundry Instructions</title>
     <style>
         * {
             margin: 0;
@@ -58,12 +58,19 @@
             font-size: 1.8em;
         }
         
-        .info-box {
+        .safe-list, .not-safe-list {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
-            border-left: 5px solid #667eea;
             margin: 15px 0;
+        }
+        
+        .safe-list {
+            border-left: 5px solid #4caf50;
+        }
+        
+        .not-safe-list {
+            border-left: 5px solid #f44336;
         }
         
         ul {
@@ -76,11 +83,45 @@
             color: #555;
         }
         
-        .remote-tip {
-            background: #d1ecf1;
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 50px;
+            margin: 20px 0;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
             padding: 15px;
             border-radius: 5px;
-            margin: 10px 0;
+            margin: 20px 0;
+        }
+        
+        .warning strong {
+            color: #856404;
         }
     </style>
 </head>
@@ -88,27 +129,23 @@
     <div class="container">
         <a href="index.html" class="back-button">← Back to Home</a>
         
-        <h1>📺 TV & Entertainment</h1>
+        <h1>🧺 Laundry Instructions</h1>
         
         <div class="section">
-            <h2>Quick Start</h2>
-            <div class="info-box">
-                <p><strong>Remotes Location:</strong> On the TV console</p>
-                <p><strong>Main Remote:</strong> White Samsung remote controls TV and volume</p>
-                <p><strong>Streaming:</strong> Netflix, Disney+, Amazon Prime Video, Youtube, Hulu, etc.</p>
-            </div>
+            <h2>Before You Start</h2>
+            <ul>
+                <li>Clean the dryer lint filter before each use</li>
+            </ul>
         </div>
-        
         
         <div class="section">
-            <h2>How to Watch TV</h2>
-            <ol style="margin-left: 20px; line-height: 1.8;">
-                <li>Press the power button on the Samsung remote (TV will turn on)</li>
-                <li>Use the Samsung remote to adjust volume</li>
-                <li>Use your account to login ot streaming services</li>
-                <li>Log out before you leave</li>
-            </ol>
+            <h2>After You Finish</h2>
+            <ul>
+                <li>Clean the dryer lint filter after each use</li>
+                <li>Keep the washer door open</li>
+            </ul>
         </div>
+        
     </div>
 </body>
 </html>
